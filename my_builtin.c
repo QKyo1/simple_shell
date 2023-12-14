@@ -16,8 +16,8 @@ int builtIn(char *line, int *status)
 	int count = 0;
 
 	x = tokenize(line);
-	count = _strlen_(x);
-	if (_strcmp(x[0], "exit") == 0)
+	count = strl3n_(x);
+	if (strCmp(x[0], "exit") == 0)
 	{
 		if (count == 1)
 		{

@@ -25,5 +25,10 @@ int more_built(char *line, char **envp, int *status);
 int more_ex(char *line, int *status);
 char strCpy(char *dest, char *src);
 int strCmp(char *s1, char *s2);
+char strCat(char *dest, char *src);
+char Str(int a);
+int count(char *line);
+char **tokenize(char *line);
+void _unsetenv(char *var);
 
 #endif

@@ -16,13 +16,13 @@ int builtIn(char *line, int *status)
 	int count = 0;
 
 	x = tokenize(line);
-	count = strl3n_(x);
+	count = strl3n(x);
 	if (strCmp(x[0], "exit") == 0)
 	{
 		if (count == 1)
 		{
 			free(line);
-			_free(x, strl3n_(x));
+			free(x, strl3n_(x));
 			exit(*status); }
 		else if (count == 2)
 		{
@@ -61,7 +61,7 @@ int comp_built(char *line, int *status)
 		{
 			chdir(dir);
 			_cd();
-			_free(a, _strlen_(a));
+			_free(a, _strl3n_(a));
 			return (1); }
 		else if (count == 2 && _strcmp(a[1], "-") == 0)
 		{
